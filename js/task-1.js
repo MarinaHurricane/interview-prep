@@ -1,10 +1,15 @@
-function slugify(title) {
-    const titleArray = title.split(" ");
-    return titleArray.join("-").toLowerCase();
-
+function reverse2(input) {
+  let result
+  for (let i = input.length - 1; i >= 0; i--) {
+    if (typeof input === "string") {
+      result += input[i]
+    } else if (Array.isArray(input)) {
+      result.push(input[i])
+    }
+  }
+  return result
 }
 
-console.log(slugify("Arrays for beginners")); 
-console.log(slugify("English for developer")); 
-console.log(slugify("Ten secrets of JavaScript")); 
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+console.log(reverse("abcd"))
+console.log(reverse(["a", "b", "c", "d"]))
+console.log(reverse([1, 2, 3, 4, 5]))
