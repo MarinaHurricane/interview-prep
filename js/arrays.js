@@ -98,3 +98,31 @@ console.log(findAverage([1, 2, 3, 4]))
 console.log(findAverage([10, 20, 30]))
 console.log(findAverage([5]))
 console.log(findAverage([]))
+
+function replaceItems(arr, item, replaceItem) {
+  const result = arr.map((arrItem) =>
+    arrItem === item ? replaceItem : arrItem,
+  )
+  return result
+}
+
+console.log(replaceItems([1, 2, 3, 4, 2], 2, "a")) // [1, 'a', 3, 4, 'a']
+console.log(replaceItems(["apple", "banana", "apple"], "apple", "orange")) // ['orange', 'banana', 'orange']
+console.log(replaceItems([true, false, true], true, 1)) // [1, false, 1]
+console.log(replaceItems([], 5, 10)) // []
+
+function makeArray(firstArray, secondArray, maxLength) {
+    const newArray = firstArray.concat(secondArray);
+    if (newArray.length > maxLength) {
+        return newArray.slice(0, maxLength);
+    } else {
+        return newArray;
+    }
+}
+
+console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
