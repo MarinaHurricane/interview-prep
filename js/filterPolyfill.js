@@ -39,4 +39,6 @@ const filterNum = nums.myFilter(function (num) {
   return num < this.maxPrice
 }, condition)
 
-console.log(filterNum)
+console.log(filterNum);
+
+
