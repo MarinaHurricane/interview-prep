@@ -10,9 +10,9 @@ function reverse2(input) {
   return result
 }
 
-console.log(reverse("abcd"))
-console.log(reverse(["a", "b", "c", "d"]))
-console.log(reverse([1, 2, 3, 4, 5]))
+// console.log(reverse2("abcd"))
+// console.log(reverse2(["a", "b", "c", "d"]))
+// console.log(reverse2([1, 2, 3, 4, 5]))
 
 
 function getNextLang(languages, current) {
@@ -142,3 +142,28 @@ console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
 console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
 console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
 console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+
+const movies = [
+{ title: 'hhhhhhh', year: 1977, genre: "фантастика", rating: 8.6, duration: 120},
+{ title: "Назад в будущее", уеаг: 1985, genre: "sci-fi"},
+{title: 'ncncncncn', genre: "Фантастика", year: 1985, rating: 8.5, duration: 140 },
+{title: "Терминатор", year: 1984, genre: "Боевик", rating: 8.0, duration: 110}
+];
+
+// const latestYear = movies.map(movie => movie.year).toSorted((a, b) => b - a)[0];
+// const latestMovie = movies.find(movie => movie.year === latestYear);
+
+// console.log('latest', latestYear);
+// console.log('movie', latestMovie);
+
+let newestMovie = movies[0];
+
+for(let i = 0; i < movies.length; i++) {
+  if(movies[i].yeah > newestMovie.year) {
+    newestMovie = movies[i];
+    console.log('mmmmm', newestMovie);
+  }
+  console.log(i)
+}
+
+console.log('newestMovie', newestMovie);
